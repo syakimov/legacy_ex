@@ -1,0 +1,6 @@
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\BestLectureSchedule\bin\Debug\BestLectureSchedule.exe.config
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\BestLectureSchedule\bin\Debug\BestLectureSchedule.exe
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\BestLectureSchedule\bin\Debug\BestLectureSchedule.pdb
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\BestLectureSchedule\obj\Debug\BestLectureSchedule.csprojResolveAssemblyReference.cache
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\BestLectureSchedule\obj\Debug\BestLectureSchedule.exe
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\BestLectureSchedule\obj\Debug\BestLectureSchedule.pdb

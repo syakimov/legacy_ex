@@ -1,0 +1,6 @@
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\KnapsackProblem\bin\Debug\KnapsackProblem.exe.config
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\KnapsackProblem\bin\Debug\KnapsackProblem.exe
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\KnapsackProblem\bin\Debug\KnapsackProblem.pdb
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\KnapsackProblem\obj\Debug\KnapsackProblem.csprojResolveAssemblyReference.cache
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\KnapsackProblem\obj\Debug\KnapsackProblem.exe
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\KnapsackProblem\obj\Debug\KnapsackProblem.pdb

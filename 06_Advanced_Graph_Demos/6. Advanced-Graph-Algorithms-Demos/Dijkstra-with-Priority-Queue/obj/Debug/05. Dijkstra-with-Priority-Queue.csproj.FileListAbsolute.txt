@@ -1,0 +1,7 @@
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Dijkstra-with-Priority-Queue\bin\Debug\DijkstraWithPriorityQueue.exe
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Dijkstra-with-Priority-Queue\bin\Debug\DijkstraWithPriorityQueue.pdb
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Dijkstra-with-Priority-Queue\obj\Debug\05. Dijkstra-with-Priority-Queue.csprojResolveAssemblyReference.cache
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Dijkstra-with-Priority-Queue\obj\Debug\DijkstraWithPriorityQueue.exe
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Dijkstra-with-Priority-Queue\obj\Debug\DijkstraWithPriorityQueue.pdb
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Dijkstra-with-Priority-Queue\bin\Debug\SoftUni.Wintellect.PowerCollections.dll
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Dijkstra-with-Priority-Queue\bin\Debug\SoftUni.Wintellect.PowerCollections.xml

@@ -1,0 +1,12 @@
+D:\SOFTUNI\Algorithms\Homeworks\Homework Dynamic Programming\04.SumWithUnlimitedCoins\bin\Debug\04.SumWithUnlimitedCoins.exe.config
+D:\SOFTUNI\Algorithms\Homeworks\Homework Dynamic Programming\04.SumWithUnlimitedCoins\bin\Debug\04.SumWithUnlimitedCoins.exe
+D:\SOFTUNI\Algorithms\Homeworks\Homework Dynamic Programming\04.SumWithUnlimitedCoins\bin\Debug\04.SumWithUnlimitedCoins.pdb
+D:\SOFTUNI\Algorithms\Homeworks\Homework Dynamic Programming\04.SumWithUnlimitedCoins\obj\Debug\04.Sum With Unlimited Coins.csprojResolveAssemblyReference.cache
+D:\SOFTUNI\Algorithms\Homeworks\Homework Dynamic Programming\04.SumWithUnlimitedCoins\obj\Debug\04.SumWithUnlimitedCoins.exe
+D:\SOFTUNI\Algorithms\Homeworks\Homework Dynamic Programming\04.SumWithUnlimitedCoins\obj\Debug\04.SumWithUnlimitedCoins.pdb
+C:\Users\Stefan\Desktop\UsableCode\03_Dynamic_Programming\04.SumWithUnlimitedCoins\bin\Debug\04.SumWithUnlimitedCoins.exe.config
+C:\Users\Stefan\Desktop\UsableCode\03_Dynamic_Programming\04.SumWithUnlimitedCoins\obj\Debug\04.SumWithUnlimitedCoins.exe
+C:\Users\Stefan\Desktop\UsableCode\03_Dynamic_Programming\04.SumWithUnlimitedCoins\obj\Debug\04.SumWithUnlimitedCoins.pdb
+C:\Users\Stefan\Desktop\UsableCode\03_Dynamic_Programming\04.SumWithUnlimitedCoins\bin\Debug\04.SumWithUnlimitedCoins.exe
+C:\Users\Stefan\Desktop\UsableCode\03_Dynamic_Programming\04.SumWithUnlimitedCoins\bin\Debug\04.SumWithUnlimitedCoins.pdb
+C:\Users\Stefan\Desktop\UsableCode\03_Dynamic_Programming\04.SumWithUnlimitedCoins\obj\Debug\04.Sum With Unlimited Coins.csprojResolveAssemblyReference.cache

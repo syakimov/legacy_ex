@@ -1,0 +1,5 @@
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Prim-Priority-Queue\bin\Debug\PrimAlgrithm.exe
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Prim-Priority-Queue\bin\Debug\PrimAlgrithm.pdb
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Prim-Priority-Queue\obj\Debug\2. Prim-Algorithm-Priority-Queue.csprojResolveAssemblyReference.cache
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Prim-Priority-Queue\obj\Debug\PrimAlgrithm.exe
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Prim-Priority-Queue\obj\Debug\PrimAlgrithm.pdb

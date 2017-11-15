@@ -1,0 +1,5 @@
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Kruskal\bin\Debug\Kruskal.exe
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Kruskal\bin\Debug\Kruskal.pdb
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Kruskal\obj\Debug\01. Kruskal-Algorithm.csprojResolveAssemblyReference.cache
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Kruskal\obj\Debug\Kruskal.exe
+C:\SVN\dsa\Algorithms-April-2016\6. Advanced-Graph-Algorithms-Demos\Kruskal\obj\Debug\Kruskal.pdb

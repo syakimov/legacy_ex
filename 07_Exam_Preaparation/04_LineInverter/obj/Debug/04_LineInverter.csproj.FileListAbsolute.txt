@@ -1,0 +1,9 @@
+c:\users\stefan\documents\visual studio 2015\Projects\ExamPreparatopmHW\04_LineInverter\bin\Debug\04_LineInverter.exe.config
+c:\users\stefan\documents\visual studio 2015\Projects\ExamPreparatopmHW\04_LineInverter\bin\Debug\04_LineInverter.exe
+c:\users\stefan\documents\visual studio 2015\Projects\ExamPreparatopmHW\04_LineInverter\bin\Debug\04_LineInverter.pdb
+c:\users\stefan\documents\visual studio 2015\Projects\ExamPreparatopmHW\04_LineInverter\obj\Debug\04_LineInverter.csprojResolveAssemblyReference.cache
+c:\users\stefan\documents\visual studio 2015\Projects\ExamPreparatopmHW\04_LineInverter\obj\Debug\04_LineInverter.exe
+c:\users\stefan\documents\visual studio 2015\Projects\ExamPreparatopmHW\04_LineInverter\obj\Debug\04_LineInverter.pdb
+C:\Users\Stefan\Documents\Visual Studio 2015\Projects\ExamPreaparation\04_LineInverter\bin\Debug\04_LineInverter.exe.config
+C:\Users\Stefan\Documents\Visual Studio 2015\Projects\ExamPreaparation\04_LineInverter\obj\Debug\04_LineInverter.exe
+C:\Users\Stefan\Documents\Visual Studio 2015\Projects\ExamPreaparation\04_LineInverter\obj\Debug\04_LineInverter.pdb

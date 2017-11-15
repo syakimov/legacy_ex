@@ -1,0 +1,6 @@
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\PathsBetweenCellsInMatrix\bin\Debug\PathsBetweenCellsInMatrix.exe.config
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\PathsBetweenCellsInMatrix\bin\Debug\PathsBetweenCellsInMatrix.exe
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\PathsBetweenCellsInMatrix\bin\Debug\PathsBetweenCellsInMatrix.pdb
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\PathsBetweenCellsInMatrix\obj\Debug\PathsBetweenCellsInMatrix.csprojResolveAssemblyReference.cache
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\PathsBetweenCellsInMatrix\obj\Debug\PathsBetweenCellsInMatrix.exe
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\PathsBetweenCellsInMatrix\obj\Debug\PathsBetweenCellsInMatrix.pdb

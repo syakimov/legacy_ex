@@ -1,0 +1,6 @@
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\Knight'sTour\bin\Debug\Knight'sTour.exe.config
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\Knight'sTour\bin\Debug\Knight'sTour.exe
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\Knight'sTour\bin\Debug\Knight'sTour.pdb
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\Knight'sTour\obj\Debug\Knight'sTour.csprojResolveAssemblyReference.cache
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\Knight'sTour\obj\Debug\Knight'sTour.exe
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\Knight'sTour\obj\Debug\Knight'sTour.pdb

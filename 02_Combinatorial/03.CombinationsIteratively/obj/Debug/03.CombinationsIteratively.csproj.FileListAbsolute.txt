@@ -1,0 +1,12 @@
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\03.CombinationsIteratively\bin\Debug\03.CombinationsIteratively.exe.config
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\03.CombinationsIteratively\bin\Debug\03.CombinationsIteratively.exe
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\03.CombinationsIteratively\bin\Debug\03.CombinationsIteratively.pdb
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\03.CombinationsIteratively\obj\Debug\03.CombinationsIteratively.csprojResolveAssemblyReference.cache
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\03.CombinationsIteratively\obj\Debug\03.CombinationsIteratively.exe
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\03.CombinationsIteratively\obj\Debug\03.CombinationsIteratively.pdb
+C:\Users\Stefan\Desktop\Algorithms\Combinatorial Algorithms\For Evaluation\02.CombinatorialAlgorithmsHomework\03.CombinationsIteratively\bin\Debug\03.CombinationsIteratively.exe.config
+C:\Users\Stefan\Desktop\Algorithms\Combinatorial Algorithms\For Evaluation\02.CombinatorialAlgorithmsHomework\03.CombinationsIteratively\obj\Debug\03.CombinationsIteratively.exe
+C:\Users\Stefan\Desktop\Algorithms\Combinatorial Algorithms\For Evaluation\02.CombinatorialAlgorithmsHomework\03.CombinationsIteratively\obj\Debug\03.CombinationsIteratively.pdb
+C:\Users\Stefan\Desktop\Algorithms\Combinatorial Algorithms\For Evaluation\Best\03.CombinationsIteratively\bin\Debug\03.CombinationsIteratively.exe.config
+C:\Users\Stefan\Desktop\Algorithms\Combinatorial Algorithms\For Evaluation\Best\03.CombinationsIteratively\obj\Debug\03.CombinationsIteratively.exe
+C:\Users\Stefan\Desktop\Algorithms\Combinatorial Algorithms\For Evaluation\Best\03.CombinationsIteratively\obj\Debug\03.CombinationsIteratively.pdb

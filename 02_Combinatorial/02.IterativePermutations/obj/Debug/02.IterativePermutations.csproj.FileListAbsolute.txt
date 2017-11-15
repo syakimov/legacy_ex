@@ -1,0 +1,9 @@
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\02.IterativePermutations\bin\Debug\02.IterativePermutations.exe.config
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\02.IterativePermutations\bin\Debug\02.IterativePermutations.exe
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\02.IterativePermutations\bin\Debug\02.IterativePermutations.pdb
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\02.IterativePermutations\obj\Debug\02.IterativePermutations.csprojResolveAssemblyReference.cache
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\02.IterativePermutations\obj\Debug\02.IterativePermutations.exe
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\02.IterativePermutations\obj\Debug\02.IterativePermutations.pdb
+C:\Users\Stefan\Desktop\Algorithms\Combinatorial Algorithms\For Evaluation\02.CombinatorialAlgorithmsHomework\02.IterativePermutations\bin\Debug\02.IterativePermutations.exe.config
+C:\Users\Stefan\Desktop\Algorithms\Combinatorial Algorithms\For Evaluation\02.CombinatorialAlgorithmsHomework\02.IterativePermutations\obj\Debug\02.IterativePermutations.exe
+C:\Users\Stefan\Desktop\Algorithms\Combinatorial Algorithms\For Evaluation\02.CombinatorialAlgorithmsHomework\02.IterativePermutations\obj\Debug\02.IterativePermutations.pdb

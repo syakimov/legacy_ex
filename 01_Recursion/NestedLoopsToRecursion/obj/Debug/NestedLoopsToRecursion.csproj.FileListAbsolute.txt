@@ -1,0 +1,6 @@
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\NestedLoopsToRecursion\bin\Debug\NestedLoopsToRecursion.exe.config
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\NestedLoopsToRecursion\bin\Debug\NestedLoopsToRecursion.exe
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\NestedLoopsToRecursion\bin\Debug\NestedLoopsToRecursion.pdb
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\NestedLoopsToRecursion\obj\Debug\NestedLoopsToRecursion.csprojResolveAssemblyReference.cache
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\NestedLoopsToRecursion\obj\Debug\NestedLoopsToRecursion.exe
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\NestedLoopsToRecursion\obj\Debug\NestedLoopsToRecursion.pdb

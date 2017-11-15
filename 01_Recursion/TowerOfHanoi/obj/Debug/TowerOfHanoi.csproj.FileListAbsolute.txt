@@ -1,0 +1,6 @@
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\TowerOfHanoi\bin\Debug\TowerOfHanoi.exe.config
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\TowerOfHanoi\bin\Debug\TowerOfHanoi.exe
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\TowerOfHanoi\bin\Debug\TowerOfHanoi.pdb
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\TowerOfHanoi\obj\Debug\TowerOfHanoi.csprojResolveAssemblyReference.cache
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\TowerOfHanoi\obj\Debug\TowerOfHanoi.exe
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\TowerOfHanoi\obj\Debug\TowerOfHanoi.pdb

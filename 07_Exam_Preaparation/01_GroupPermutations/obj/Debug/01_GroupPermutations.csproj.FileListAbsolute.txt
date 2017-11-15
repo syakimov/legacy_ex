@@ -1,0 +1,6 @@
+c:\users\stefan\documents\visual studio 2015\Projects\ExamPreparatopmHW\01_GroupPermutations\obj\Debug\01_GroupPermutations.csprojResolveAssemblyReference.cache
+c:\users\stefan\documents\visual studio 2015\Projects\ExamPreparatopmHW\01_GroupPermutations\bin\Debug\01_GroupPermutations.exe.config
+c:\users\stefan\documents\visual studio 2015\Projects\ExamPreparatopmHW\01_GroupPermutations\bin\Debug\01_GroupPermutations.exe
+c:\users\stefan\documents\visual studio 2015\Projects\ExamPreparatopmHW\01_GroupPermutations\bin\Debug\01_GroupPermutations.pdb
+c:\users\stefan\documents\visual studio 2015\Projects\ExamPreparatopmHW\01_GroupPermutations\obj\Debug\01_GroupPermutations.exe
+c:\users\stefan\documents\visual studio 2015\Projects\ExamPreparatopmHW\01_GroupPermutations\obj\Debug\01_GroupPermutations.pdb

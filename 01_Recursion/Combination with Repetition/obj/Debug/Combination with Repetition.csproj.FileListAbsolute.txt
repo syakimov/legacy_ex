@@ -1,0 +1,6 @@
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\Combination with Repetition\bin\Debug\Combination with Repetition.exe.config
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\Combination with Repetition\bin\Debug\Combination with Repetition.exe
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\Combination with Repetition\bin\Debug\Combination with Repetition.pdb
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\Combination with Repetition\obj\Debug\Combination with Repetition.exe
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\Combination with Repetition\obj\Debug\Combination with Repetition.pdb
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\Combination with Repetition\obj\Debug\Combination with Repetition.csprojResolveAssemblyReference.cache

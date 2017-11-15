@@ -1,0 +1,1924 @@
+////////////////////////////////////////////////////////////////////////
+////////////////////////////-|- Recursion -|-///////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+========================================================================
+
+
+Problem 1.	Reverse Array
+Write a program that reverses and prints an array. Use recursion.
+
+
+Problem 2.	Nested Loops To Recursion
+Write a program that simulates the execution of n nested loops from 1 to n which prints the values of all its iteration variables at any given time on a single line. Use recursion.
+
+Problem 3.	Combinations with Repetition
+Write a recursive program for generating and printing all combinations with duplicates of k elements from a set of n elements (k <= n). In combinations, the order of elements doesn’t matter, therefore (1 2) and (2 1) are the same combination, meaning that once you print/obtain (1 2), (2 1) is no longer valid.
+
+========================================================================
+
+using System.Linq;
+
+namespace _01.ReverseArray
+{
+    using System;
+
+    public class ReverseArray
+    {
+        public static void Main()
+        {
+          	var arr = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            var reversedArr = new int[arr.Length];
+            var output = ReverseArr(arr, reversedArr, arr.Length - 1, 0);
+
+            Console.WriteLine(string.Join(" ", output));
+        }
+
+        public static int[] ReverseArr(int[] arr, int[] reversed, int end, int start)
+        {
+            if (end == 0 && start == arr.Length - 1)
+            {
+                reversed[start] = arr[end];
+                return reversed;
+            }
+
+            reversed[start] = arr[end];
+            return ReverseArr(arr, reversed, end - 1, start + 1);
+        }
+    }
+}
+
+------------------------------------------------------------------------
+
+namespace _02.NestedLoopsToRecursion
+{
+    using System;
+
+    public class NestedLoopsToRecursion
+   {
+        private static int stepsTaken = 0;
+
+        private static Stack<int> source;
+
+        private static readonly Stack<int> destination = new Stack<int>();
+
+        private static readonly Stack<int> spare = new Stack<int>();
+
+        public static void Main()
+        {
+         	Console.Write("Enter a number: ");
+            int n = int.Parse(Console.ReadLine());
+            var range = Enumerable.Range(1, n).Reverse();
+            source = new Stack<int>(range);
+
+            PrintPegs();
+            MoveDisks(n, source, spare, destination);
+            Console.ReadLine();
+        }
+
+        private static void PrintPegs()
+        {
+            Console.WriteLine("Source: {0}", string.Join(", ", source.Reverse()));
+            Console.WriteLine("Destination: {0}", string.Join(",", destination.Reverse()));
+            Console.WriteLine("Spare: {0}", string.Join(", ", spare.Reverse()));
+        }
+
+        private static void MoveDisks(int bottomDisk, Stack<int> source, Stack<int> spare, Stack<int> destination)
+        {
+            if (bottomDisk == 1)
+            {
+                stepsTaken++;
+                destination.Push(source.Pop());
+                Console.WriteLine(string.Format("Step #{0}: Moved disk {1}", stepsTaken, bottomDisk));
+                PrintPegs();
+                return;
+            }
+
+            MoveDisks(bottomDisk - 1, source, destination, spare);
+            destination.Push(source.Pop());
+            stepsTaken++;
+            Console.WriteLine(string.Format("Step #{0}: Moved disk {1}", stepsTaken, bottomDisk));
+            PrintPegs();
+            MoveDisks(bottomDisk - 1, spare, source, destination);
+        }
+    }
+}
+
+------------------------------------------------------------------------
+
+namespace _03.CombinationsWithRepetitions
+{
+    using System;
+
+    public class CombinationsWithRepetitions
+    {
+        public static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int k = int.Parse(Console.ReadLine());
+            int startValue = 1;
+            int startIndex = 0;
+            int[] arr = new int[k];
+            GenCombs(arr, startIndex, startValue, n);
+        }
+
+        public static void GenCombs(int[] arr, int index, int startNum, int endNum)
+        {
+            if (index >= arr.Length)
+            {
+                Console.WriteLine("(" + string.Join(", ", arr) + ")");
+            }
+            else
+            {
+                for (int i = startNum; i <= endNum; i++)
+                {
+                    arr[index] = i;
+                    GenCombs(arr, index + 1, i, endNum);
+                }
+            }
+        }
+    }
+}
+
+------------------------------------------------------------------------
+
+namespace _04.TowerOfHanoi
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    public class TowerOfHanoi
+    {
+        private static int stepsTaken = 0;
+
+        private static Stack<int> source;
+
+        private static readonly Stack<int> destination = new Stack<int>();
+
+        private static readonly Stack<int> spare = new Stack<int>();
+
+        public static void Main()
+        {
+         	Console.Write("Enter a number: ");
+            int n = int.Parse(Console.ReadLine());
+            var range = Enumerable.Range(1, n).Reverse();
+            source = new Stack<int>(range);
+
+            PrintPegs();
+            MoveDisks(n, source, spare, destination);
+        }
+
+        private static void PrintPegs()
+        {
+            Console.WriteLine("Source: {0}", string.Join(", ", source.Reverse()));
+            Console.WriteLine("Destination: {0}", string.Join(",", destination.Reverse()));
+            Console.WriteLine("Spare: {0}", string.Join(", ", spare.Reverse()));
+        }
+
+        private static void MoveDisks(int bottomDisk, Stack<int> source, Stack<int> spare, Stack<int> destination)
+        {
+            if (bottomDisk == 1)
+            {
+                stepsTaken++;
+                destination.Push(source.Pop());
+                Console.WriteLine($"Step #{stepsTaken}: Moved disk {bottomDisk}");
+                PrintPegs();
+                return;
+            }
+
+            MoveDisks(bottomDisk - 1, source, destination, spare);
+            destination.Push(source.Pop());
+            stepsTaken++;
+            Console.WriteLine($"Step #{stepsTaken}: Moved disk {bottomDisk}");
+            PrintPegs();
+            MoveDisks(bottomDisk - 1, spare, source, destination);
+        }
+    }
+}
+
+------------------------------------------------------------------------
+
+namespace _05.CombinationsWithoutRepetition
+{
+    using System;
+
+    public class CombinationsWithoutRepetition
+    {
+        public static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine());
+            int k = int.Parse(Console.ReadLine());
+            int startValue = 1;
+            int startIndex = 0;
+            int[] arr = new int[k];
+            GenCombs(arr, startIndex, startValue, n);
+        }
+
+        public static void GenCombs(int[] arr, int index, int startNum, int endNum)
+        {
+            if (index >= arr.Length)
+            {
+                Console.WriteLine("(" + string.Join(", ", arr) + ")");
+            }
+            else
+            {
+                for (int i = startNum; i <= endNum; i++)
+                {
+                    arr[index] = i;
+                    GenCombs(arr, index + 1, i + 1, endNum);
+                }
+            }
+        }
+    }
+}
+
+------------------------------------------------------------------------
+namespace _06.PathsBetweenCellsInMatrix
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    public class PathsBetweenCells
+    {
+        private static char[,] firstLab =
+        {
+            {'s', ' ', ' ', ' '},
+            {' ', '*', '*', ' '},
+            {' ', '*', '*', ' '},
+            {' ', '*', 'e', ' '},
+            {' ', ' ', ' ', ' '}
+        };
+
+        private static char[,] secondLab =
+         {
+            { 's', ' ', ' ', ' ', ' ', ' '},
+            { ' ', '*', '*', ' ', '*', ' '},
+            { ' ', '*', '*', ' ', '*', ' '},
+            { ' ', '*', 'e', ' ', ' ', ' '},
+            { ' ', ' ', ' ', '*', ' ', ' '},
+         };
+
+        private static List<char> steps = new List<char>();
+
+        private static int countSize = 0;
+
+        private static List<Tuple<int, int>> path = new List<Tuple<int, int>>();
+
+        public static void Main()
+        {
+            FindPathToExit(firstLab, 0, 0, 's');
+            PrintTotalPaths();
+            countSize = 0;
+            Console.WriteLine();
+            FindPathToExit(secondLab, 0, 0, 's');
+            PrintTotalPaths();
+
+        }
+
+        public static bool InRange(int row, int col, char[,] matrix)
+        {
+            bool rowInRange = row >= 0 && row < matrix.GetLength(0);
+            bool colInRange = col >= 0 && col < matrix.GetLength(1);
+            return rowInRange && colInRange;
+        }
+
+        public static void FindPathToExit(char[,] matrix, int row, int col, char direction)
+        {
+            if (!InRange(row, col, matrix))
+            {
+                // We are out of the labyrinth -> can't find a path
+                return;
+            }
+            steps.Add(direction);
+
+            // Check if we have found the exit
+            if (matrix[row, col] == 'e')
+            {
+                countSize++;
+                PrintPath();
+            }
+
+
+            if (matrix[row, col] == ' ' || matrix[row, col] == 's')
+            {
+                // Temporary mark the current cell as visited to avoid cycles
+                matrix[row, col] = '.';
+                // Invoke recursion the explore all possible directions
+                FindPathToExit(matrix, row, col - 1, 'L'); // left
+                FindPathToExit(matrix, row - 1, col, 'U'); // up
+                FindPathToExit(matrix, row, col + 1, 'R'); // right
+                FindPathToExit(matrix, row + 1, col, 'D'); // down
+                // Mark back the current cell as free
+                // Comment the below line to visit each cell at most once
+                matrix[row, col] = ' ';
+            }
+            steps.RemoveAt(steps.Count - 1);
+
+        }
+
+        private static void PrintPath()
+        {
+            Console.WriteLine(string.Join(" ", steps.Skip(1)));
+        }
+
+        private static void PrintTotalPaths()
+        {
+            Console.WriteLine($"Total paths found: {countSize}");
+        }
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////-|- 02_Combinatorial -|-////////////////////
+////////////////////////////////////////////////////////////////////////
+
+=======================================================================
+
+Problem 1.	Permutations
+Write a recursive program for generating and printing all permutations (without repetition) of the numbers 1, 2, ..., n for a given integer number n (n > 0). The number of permutations is found by calculating n!
+
+Problem 2.	Generate Permutations Iteratively
+The above problem presented a recursive solution for generating all permutations (without repeating elements) of a collection. Your task is to write a non-recursive algorithm to achieve the same goal. There shouldn’t be any recursive calls in your program (only loops). You may use the examples for problem 1 to check whether your solution is correct.
+
+Problem 3.	Generate Combinations Iteratively
+Write an iterative program to generate all combinations (without repetition) of k elements from a set of n elements. Remember, in combinations, the order of elements doesn’t matter – (1 2) and (2 1) are considered the same combination. You are not allowed to use recursion. Search the Internet for a suitable algorithm.
+
+Problem 4.	Generate Subsets of String Array
+Write a recursive program for generating and printing all subsets of k strings from given set of strings s.
+
+Problem 5.	Permutations with Repetition
+Write a program to generate all permutations with repetition of a given multi-set. Ensure your program efficiently avoids duplicated permutations. Test it with { 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 }.
+
+=======================================================================
+
+------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _01.Permutations
+{
+
+    class Program
+    {
+        static int permutationsCount = 0;
+
+        static void Main(string[] args)
+        {
+            var n = 3;
+            var s = Enumerable.Range(1, n).ToList();
+            PermutationsRep(s);
+            Console.WriteLine("Total permutations: " + permutationsCount);
+        }
+
+
+        public static void PermutationsRep(List<int> permutations)
+        {
+            permutations.Sort();
+            PermuteRep(permutations, 0, permutations.Count);
+        }
+
+        public static void PermuteRep(List<int> permutations, int start, int n)
+        {
+            Console.WriteLine(string.Join(", ", permutations));
+            permutationsCount++;
+
+            if (start < n)
+            {
+                for (int i = n - 2; i >= start; i--)
+                {
+                    var swap = 0;
+                    for (int j = i + 1; j < n; j++)
+                    {
+                        if (permutations[i] != permutations[j])
+                        {
+                            swap = permutations[i];
+                            permutations[i] = permutations[j];
+                            permutations[j] = swap;
+
+                            PermuteRep(permutations, i + 1, n);
+                        }
+                    }
+
+                    swap = permutations[i];
+                    for (int k = i; k < n - 1; )
+                    {
+                        permutations[k] = permutations[++k];
+                    }
+
+                    permutations[n - 1] = swap;
+                }
+            }
+        }
+    }
+}
+
+------------------------------------------------------------------------
+namespace _02.PermutationsIteratively
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    class Permutations
+    {
+        static void Main(string[] args)
+        {
+            int n = 5; //int.Parse(Console.ReadLine());
+            var arr = Enumerable.Range(1, n).ToArray();
+            var permutations = Permute(arr);
+            var permutationCount = 0;
+            foreach (var permutation in permutations)
+            {
+                Console.WriteLine(string.Join(", ", permutation));
+                permutationCount++;
+            }
+
+            Console.WriteLine("Total permutations: " + permutationCount);
+        }
+
+
+        public static IEnumerable<List<T>> Permute<T>(IList<T> items)
+        {
+            var indexes = Enumerable.Range(0, items.Count).ToArray();
+
+            yield return indexes.Select(idx => items[idx]).ToList();
+
+            var weights = new int[items.Count];
+            var idxUpper = 1;
+            while (idxUpper < items.Count)
+            {
+                if (weights[idxUpper] < idxUpper)
+                {
+                    var idxLower = idxUpper % 2 * weights[idxUpper];
+                    var tmp = indexes[idxLower];
+                    indexes[idxLower] = indexes[idxUpper];
+                    indexes[idxUpper] = tmp;
+                    yield return indexes.Select(idx => items[idx]).ToList();
+                    weights[idxUpper]++;
+                    idxUpper = 1;
+                }
+                else
+                {
+                    weights[idxUpper] = 0;
+                    idxUpper++;
+                }
+            }
+        }
+    }
+}
+------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _03.Generate_Combinations_Iteratively
+{
+    class CombinationsIteratively
+    {
+        static void Main(string[] args)
+        {
+            int n = 5;
+            int k = 3;
+            foreach (int[] combinations in Combinations(k, n))
+            {
+                Console.WriteLine(string.Join(", ", combinations));
+            }
+        }
+
+        public static IEnumerable<int[]> Combinations(int m, int n)
+        {
+            int[] result = new int[m];
+            Stack<int> stack = new Stack<int>();
+            stack.Push(1);
+
+            while (stack.Count > 0)
+            {
+                int index = stack.Count - 1;
+                int value = stack.Pop();
+
+                while (value <= n)
+                {
+                    result[index++] = value++;
+                    stack.Push(value);
+                    if (index == m)
+                    {
+                        yield return result;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+}
+
+------------------------------------------------------------------------
+namespace _04.Subsets
+{
+    using System;
+
+    class Subsets
+    {
+        static void Main(string[] args)
+        {
+            var items = new[] { "test", "rock", "fun" };
+            var k = 2;
+            var arr = new string[k];
+
+            GetAllCombinations(items, arr);
+        }
+
+        private static void GetAllCombinations(string[] items, string[] arr, int index = 0, int startNum = 0)
+        {
+            if (index >= arr.Length)
+            {
+                PrintCombination(arr);
+                return;
+            }
+            for (int i = startNum; i < items.Length; i++)
+            {
+                arr[index] = items[i];
+                GetAllCombinations(items, arr, index + 1, i + 1);
+            }
+        }
+
+        private static void PrintCombination(string[] ints)
+        {
+            Console.WriteLine("({0})", string.Join(" ", ints));
+        }
+    }
+}
+------------------------------------------------------------------------
+
+namespace _05.AllPermutations
+{
+    using System;
+    using System.Collections.Generic;
+
+    class Permutations
+    {
+        static void Main(string[] args)
+        {
+            // var s = new List<int> {1, 3, 5, 5};
+            var s = new List<int> { 1, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 };
+            PermutationsRep(s);
+        }
+
+
+        public static void PermutationsRep(List<int> permutations)
+        {
+            permutations.Sort();
+            PermuteRep(permutations, 0, permutations.Count);
+        }
+
+        public static void PermuteRep(List<int> permutations, int start, int n)
+        {
+            Console.WriteLine(string.Join(", ", permutations));
+
+            if (start < n)
+            {
+                for (int i = n - 2; i >= start; i--)
+                {
+                    var swap = 0;
+                    for (int j = i + 1; j < n; j++)
+                    {
+                        if (permutations[i] != permutations[j])
+                        {
+                            swap = permutations[i];
+                            permutations[i] = permutations[j];
+                            permutations[j] = swap;
+
+                            PermuteRep(permutations, i + 1, n);
+                        }
+                    }
+
+                    swap = permutations[i];
+                    for (int k = i; k < n - 1; )
+                    {
+                        permutations[k] = permutations[++k];
+                    }
+
+                    permutations[n - 1] = swap;
+                }
+            }
+        }
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////-|- Dynamic Programming-|-//////////////////
+////////////////////////////////////////////////////////////////////////
+
+
+
+========================================================================
+========================================================================
+
+------------------------------------------------------------------------
+
+namespace _01.Binomial
+{
+    using System;
+    using System.Collections.Generic;
+
+    class BinomialCoef
+    {
+        static void Main(string[] args)
+        {
+            var n = 10;
+            var k = 5;
+            var coef = new List<List<int>>
+            {
+                new List<int>() {1},
+                new List<int>() {1, 1, 0}
+            };
+
+            for (int row = 2; row <= n; row++)
+            {
+                coef.Add(new List<int>() { 1 });
+                for (int col = 1; col <= row; col++)
+                {
+                    var num = coef[row - 1][col - 1] + coef[row - 1][col];
+                    coef[row].Add(num);
+                }
+
+                coef[row].Add(0);
+            }
+
+            Console.WriteLine(coef[n][k]);
+        }
+    }
+}
+
+------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _02.Zigzag_Sequence
+{
+    class ZigzagSequence
+    {
+        public static void Main(string[] args)
+        {
+            //var input = "8,3,5,7,0,8,9,10,20,20,20,12,19,11";
+            var input = "24,5,31,3,3,342,51,114,52,55,56,58";
+            var sequence = input.Split(',').Select(int.Parse).ToArray();
+            var longestSeq = LongestZigZag(sequence);
+            Console.WriteLine(string.Join(" ", longestSeq));
+        }
+
+        public static List<int> LongestZigZag(int[] sequence)
+        {
+            var seq = new List<int>();
+            int[] diff = new int[sequence.Length - 1];
+
+            for (int i = 1; i < sequence.Length; i++)
+            {
+                diff[i - 1] = sequence[i] - sequence[i - 1];
+            }
+
+            int prevsign = Sign(diff[0]);
+            seq.Add(sequence[0]);
+
+            for (int i = 1; i < diff.Length; i++)
+            {
+                int sign = Sign(diff[i]);
+                if (prevsign * sign == -1)
+                {
+                    prevsign = sign;
+                    if (seq.Count == 1)
+                    {
+                        seq.Add(sequence[i]);
+                    }
+                    seq.Add(sequence[i + 1]);
+                }
+            }
+
+            return seq;
+        }
+
+        public static int Sign(int a)
+        {
+            if (a == 0)
+            {
+                return 0;
+            }
+
+            return a / Math.Abs(a);
+        }
+    }
+}
+------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _03.Dividing_Presents
+{
+    class DividingPresents
+    {
+        static void Main(string[] args)
+        {
+            var input = "2,2,4,4,1,1";
+            //var input = "3,2,3,2,2,77,89,23,90,11";
+            var sequence = input.Split(',').Select(int.Parse).ToList();
+            sequence.Sort();
+            var alan = new List<int>();
+            var alanValue = 0;
+            var bob = new List<int>();
+            var bobValue = 0;
+            for (int i = sequence.Count - 1; i >= 0 ; i--)
+            {
+                if (bobValue < alanValue)
+                {
+                    bobValue += sequence[i];
+                    bob.Add(sequence[i]);
+                }
+                else
+                {
+                    alanValue += sequence[i];
+                    alan.Add(sequence[i]);
+                }
+            }
+
+            Console.WriteLine("Difference: {0}", Math.Abs(alanValue - bobValue));
+            Console.WriteLine("Alan:{0} Bob:{1}", alanValue, bobValue);
+            Console.WriteLine("Alan takes: {0}", string.Join(" ", alan));
+            Console.WriteLine("Bob takes: {0}", string.Join(" ", bob));
+        }
+    }
+}
+------------------------------------------------------------------------
+namespace _04.UnlimitedCoins
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    class UnlimtedCoins
+    {
+        private static int combinationsCount = 0;
+
+        static void Main(string[] args)
+        {
+            var s = 100;
+            var coins = new int[] { 1, 2, 5, 10, 20, 50, 100 };
+
+            GetAllCombinations(coins, s);
+            Console.WriteLine(combinationsCount);
+        }
+
+        private static void GetAllCombinations(int[] coins, int desiredSum, int sum = 0, int startNum = 0)
+        {
+            if (sum == desiredSum)
+            {
+                combinationsCount++;
+                return;
+            }
+
+            if (sum > desiredSum)
+            {
+                return;
+            }
+
+            for (int i = startNum; i < coins.Length; i++)
+            {
+                sum += coins[i];
+                GetAllCombinations(coins, desiredSum, sum, i);
+                sum -= coins[i];
+            }
+        }
+    }
+}
+------------------------------------------------------------------------
+namespace LimitedCoins
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    class LimitedCoins
+    {
+        private static readonly HashSet<string> Combinations = new HashSet<string>();
+
+        static void Main(string[] args)
+        {
+            var s = 100;
+            var coins = new int[] { 50, 20, 20, 20, 20, 20, 10 };
+
+            GetAllCombinations(coins.ToArray(), s, new bool[coins.Length], new List<int>());
+            Console.WriteLine(Combinations.Count);
+        }
+
+        private static void GetAllCombinations(int[] coins, int desiredSum, bool[] usedCoins, List<int> currentElements, int currentSum = 0, int startNum = 0)
+        {
+            if (currentSum == desiredSum)
+            {
+                Combinations.Add(string.Join("", currentElements));
+                return;
+            }
+
+            if (currentSum > desiredSum)
+            {
+                return;
+            }
+
+            for (int i = startNum; i < coins.Length; i++)
+            {
+                if (usedCoins[i] == false)
+                {
+                    usedCoins[i] = true;
+                    currentElements.Add(coins[i]);
+                    currentSum += coins[i];
+
+                    GetAllCombinations(coins, desiredSum, usedCoins, currentElements, currentSum, i);
+
+                    currentSum -= coins[i];
+                    currentElements.Remove(coins[i]);
+                    usedCoins[i] = false;
+                }
+            }
+        }
+    }
+}
+------------------------------------------------------------------------
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Connecting_Cables
+{
+    class ConnectingCables
+    {
+        private static void Main(string[] args)
+        {
+            var side1 = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            //var side1 = new List<int> { 1, 2, 3 };
+            var side2 = new List<int> { 2, 5, 3, 8, 7, 4, 6, 9, 1 };
+            //var side2 = new List<int> { 1, 2, 3};
+
+            var field = new int[side1.Count, side2.Count];
+
+            if (side1[0] == side2[0])
+            {
+                field[0, 0] = 1;
+            }
+
+            for (int col = 1; col < field.GetLength(1); col++)
+            {
+                var value = field[0, col - 1];
+                if (side1[0] == side2[col])
+                {
+                    value++;
+                }
+
+                field[0, col] = value;
+            }
+
+            for (int row = 1; row < field.GetLength(0); row++)
+            {
+                var value = field[row - 1, 0];
+                if (side1[row] == side2[0])
+                {
+                    value++;
+                }
+
+                field[row, 0] = value;
+            }
+
+            for (int row = 1; row < field.GetLength(0); row++)
+            {
+                for (int col = 1; col < field.GetLength(1); col++)
+                {
+                    var value = Math.Max(field[row - 1, col], field[row, col - 1]);
+                    if (side1[row] == side2[col])
+                    {
+                        value++;
+                    }
+
+                    field[row, col] = value;
+                }
+            }
+
+            var x = field.GetLength(0) - 1;
+            var y = field.GetLength(1) - 1;
+            var pairs = new List<int>();
+            while (x >= 0 && y >= 0)
+            {
+                if ((side1[x] == side2[y]))
+                {
+                    pairs.Add(side1[x]);
+                    x--;
+                    y--;
+                }
+                else if (field[x - 1, y] == field[x, y])
+                {
+                    x--;
+                }
+                else
+                {
+                    y--;
+                }
+            }
+
+            pairs.Reverse();
+
+            Console.WriteLine("Maximum pairs connected: {0}", field.Cast<int>().Max());
+            Console.WriteLine("Connected pairs: {0}", string.Join(" ", pairs));
+        }
+    }
+}
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////-|- Graphs 1-|-/////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+------------------------------------------------------------------------
+
+namespace _01.DistanceBetweenVertices
+{
+    using System;
+    using System.Collections.Generic;
+
+    public static class DistanceBetweenVertices
+    {
+        private static Dictionary<int, List<int>> graph;
+
+        public static void Main()
+        {
+            graph = new Dictionary<int, List<int>>()
+            {
+                { 1, new List<int>() { 4 } },
+                { 2, new List<int>() { 4 } },
+                { 3, new List<int>() { 4, 5 } },
+                { 4, new List<int>() { 6 } },
+                { 5, new List<int>() { 3, 7, 8 } },
+                { 6, new List<int>() },
+                { 7, new List<int>() { 8 } },
+                { 8, new List<int>() }
+            };
+
+            var distancesToFind = new List<Tuple<int, int>>()
+            {
+                new Tuple<int, int>(1, 6),
+                new Tuple<int, int>(1, 5),
+                new Tuple<int, int>(5, 6),
+                new Tuple<int, int>(5, 8),
+            };
+
+            foreach (var verticesPair in distancesToFind)
+            {
+                var shortestDistance = FindShortestDistance(verticesPair.Item1, verticesPair.Item2);
+                Console.WriteLine($"{{{verticesPair.Item1}, {verticesPair.Item2}}} -> {shortestDistance}");
+            }
+        }
+
+        private static int FindShortestDistance(int startVertex, int endVertex)
+        {
+            var visited = new HashSet<int>();
+
+            var queue = new Queue<Tuple<int, int>>();
+            queue.Enqueue(new Tuple<int, int>(startVertex, 0));
+
+            while (queue.Count > 0)
+            {
+                var currentNode = queue.Dequeue();
+                visited.Add(currentNode.Item1);
+
+                if (currentNode.Item1 == endVertex)
+                {
+                    return currentNode.Item2;
+                }
+
+                foreach (var child in graph[currentNode.Item1])
+                {
+                    if (!visited.Contains(child))
+                    {
+                        queue.Enqueue(new Tuple<int, int>(child, currentNode.Item2 + 1));
+                    }
+                }
+            }
+
+            return -1;
+        }
+    }
+}
+------------------------------------------------------------------------
+namespace _02.AreasInMatrix
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    public static class AreasInMatrix
+    {
+        private static char[][] matrix;
+        private static bool[,] visited;
+        private static SortedDictionary<char, int> areas = 
+            new SortedDictionary<char, int>(); 
+
+        public static void Main()
+        {
+            var rows = int.Parse(Console.ReadLine().Last().ToString());
+            matrix = new char[rows][];
+            for (int row = 0; row < rows; row++)
+            {
+                matrix[row] = Console.ReadLine().ToCharArray();
+            }
+
+            var cols = matrix[0].Length;
+
+            visited = new bool[rows, cols];
+
+            for (int row = 0; row < rows; row++)
+            {
+                for (int col = 0; col < cols; col++)
+                {
+                    if (!visited[row, col])
+                    {
+                        if (!areas.ContainsKey(matrix[row][col]))
+                        {
+                            areas[matrix[row][col]] = 0;
+                        }
+
+                        Dfs(row, col, matrix[row][col]);
+
+                        areas[matrix[row][col]]++;
+                    }
+                }
+            }
+
+            Console.WriteLine($"Areas: {areas.Values.Sum()}");
+            foreach (var area in areas)
+            {
+                Console.WriteLine($"Letter '{area.Key}' -> {area.Value}");
+            }
+        }
+
+        private static void Dfs(int row, int col, char currentChar)
+        {
+            if (row < 0 || row >= matrix.Length ||
+                col < 0 || col >= matrix[0].Length ||
+                visited[row, col] ||
+                matrix[row][col] != currentChar)
+            {
+                return;
+            }
+
+            visited[row, col] = true;
+
+            Dfs(row, col + 1, currentChar);
+            Dfs(row + 1, col, currentChar);
+            Dfs(row, col - 1, currentChar);
+            Dfs(row - 1, col, currentChar);
+        }
+    }
+}
+------------------------------------------------------------------------
+namespace _03.CyclesInAGraph
+{
+    using System;
+    using System.Collections.Generic;
+
+    public static class CyclesInAGraph
+    {
+        private static Dictionary<string, List<string>> graph;
+        private static HashSet<string> visitedNodes = new HashSet<string>();
+
+        public static void Main()
+        {
+            graph = new Dictionary<string, List<string>>();
+
+            var input = Console.ReadLine();
+            while (input != string.Empty)
+            {
+                var vertices = input.Split(new[] { ' ', '-' }, StringSplitOptions.RemoveEmptyEntries);
+                if (!graph.ContainsKey(vertices[0]))
+                {
+                    graph[vertices[0]] = new List<string>();
+                }
+
+                if (!graph.ContainsKey(vertices[1]))
+                {
+                    graph[vertices[1]] = new List<string>();
+                }
+
+                graph[vertices[0]].Add(vertices[1]);
+                graph[vertices[1]].Add(vertices[0]);
+
+                input = Console.ReadLine();
+            }
+
+            var result = false;
+            foreach (var vertex in graph.Keys)
+            {
+                result = CheckGraphForCycle(vertex);
+                if (result)
+                {
+                    break;
+                }
+            }
+
+            Console.WriteLine($"Acyclic: {(result ? "No" : "Yes")}");
+        }
+
+        private static bool CheckGraphForCycle(string vertex)
+        {
+            var queue = new Queue<Tuple<string, string>>(); // <node, node's parent>
+            var cyclicNodes = new HashSet<string>();
+
+            queue.Enqueue(new Tuple<string, string>(vertex, null));
+            while (queue.Count > 0)
+            {
+                var currentVertex = queue.Dequeue();
+
+                if (cyclicNodes.Contains(currentVertex.Item1))
+                {
+                    return true;
+                }
+
+                visitedNodes.Add(currentVertex.Item1);
+                cyclicNodes.Add(currentVertex.Item1);
+                
+                foreach (var child in graph[currentVertex.Item1])
+                {
+                    if (child != currentVertex.Item2)
+                    {
+                        queue.Enqueue(new Tuple<string, string>(child, currentVertex.Item1));
+                    }
+                }
+            }
+
+            return false;
+        }
+    }
+}
+
+------------------------------------------------------------------------
+namespace _03.CyclesInAGraphDfs
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Text.RegularExpressions;
+
+    public static class CyclesInAGraphBfs
+    {
+        private static Dictionary<string, List<string>> graph;
+        private static HashSet<string> visitedNodes = new HashSet<string>();
+        private static HashSet<string> ciclyNodes = new HashSet<string>();
+
+        public static void Main()
+        {
+            graph = new Dictionary<string, List<string>>();
+
+            var input = Console.ReadLine();
+            while (input != string.Empty)
+            {
+                var nodes = Regex.Split(input, @"[^\w]+");
+                if (!graph.ContainsKey(nodes[0]))
+                {
+                    graph[nodes[0]] = new List<string>();
+                }
+
+                if (!graph.ContainsKey(nodes[1]))
+                {
+                    graph[nodes[1]] = new List<string>();
+                }
+
+                graph[nodes[0]].Add(nodes[1]);
+                graph[nodes[1]].Add(nodes[0]);
+
+                input = Console.ReadLine();
+            }
+
+            var result = false;
+            foreach (var node in graph.Keys)
+            {
+                CheckIfGraphIsCyclic(new Tuple<string, string>(node, null), ref result);
+                if (result)
+                {
+                    break;
+                }
+            }
+
+            Console.WriteLine($"Acyclic: {(result ? "No" : "Yes")}");
+        }
+
+        private static void CheckIfGraphIsCyclic(Tuple<string, string> node, ref bool result)
+        {
+            var nodeValue = node.Item1;
+            var nodeParent = node.Item2;
+
+            if (ciclyNodes.Contains(nodeValue))
+            {
+                result = true;
+                return;
+            }
+
+            visitedNodes.Add(nodeValue);
+            ciclyNodes.Add(nodeValue);
+
+            foreach (var child in graph[nodeValue])
+            {
+                if (child != nodeParent)
+                {
+                    CheckIfGraphIsCyclic(new Tuple<string, string>(child, nodeValue), ref result);
+                }
+            }
+
+            ciclyNodes.Remove(nodeValue);
+        }
+    }
+}
+
+------------------------------------------------------------------------
+namespace _04.Salaries
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
+    public static class Salaries
+    {
+        public static void Main()
+        {
+            Dictionary<int, Employee> employees = 
+                new Dictionary<int, Employee>();
+
+            var totalEmployees = int.Parse(Console.ReadLine());
+            for (int i = 0; i < totalEmployees; i++)
+            {
+                var subEmployees = Console.ReadLine();
+                
+                if (!employees.ContainsKey(i))
+                {
+                    employees.Add(i, new Employee());
+                }
+
+                var currentEmployee = employees[i];
+
+                for (int j = 0; j < totalEmployees; j++)
+                {
+                    if (subEmployees[j] == 'Y')
+                    {
+                        if (!employees.ContainsKey(j))
+                        {
+                            employees.Add(j, new Employee());
+                        }
+
+                        var subEmployee = employees[j];
+                        currentEmployee.Employees.Add(subEmployee);
+                    }
+                }
+            }
+
+            Console.WriteLine(employees.Select(e => e.Value.Salary).Sum());
+        }
+
+        private class Employee
+        {
+            private decimal? salary;
+
+            public Employee()
+            {
+                this.Employees = new List<Employee>();
+            }
+
+            public List<Employee> Employees { get; private set; }
+
+            public decimal Salary
+            {
+                get
+                {
+                    if (this.salary == null)
+                    {
+                        this.CalculateSalary();
+                    }
+
+                    return this.salary.Value;
+                }
+            }
+
+            private void CalculateSalary()
+            {
+                if (this.Employees.Count == 0)
+                {
+                    this.salary = 1;
+                }
+                else
+                {
+                    this.salary = 0;
+                    foreach (var employee in this.Employees)
+                    {
+                        this.salary += employee.Salary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+------------------------------------------------------------------------
+
+namespace _05.BreakCycles
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Text.RegularExpressions;
+
+    public class Edge : IComparable<Edge>
+    {
+        public string Start { get; set; }
+
+        public string End { get; set; }
+
+        public int CompareTo(Edge other)
+        {
+            int comparer = string.Compare(this.Start, other.Start, StringComparison.Ordinal);
+            if (comparer == 0)
+            {
+                return string.Compare(this.End, other.End, StringComparison.Ordinal);
+            }
+
+            return comparer;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0} - {1}", this.Start, this.End);
+        }
+    }
+
+
+    public static class BreakCycles
+    {
+        private static Dictionary<string, List<string>> childNodes;
+        private static List<Edge> edges;
+        private static List<Edge> edgesToRemove;
+        private static HashSet<string> visited;
+        private static bool isCyclic;
+
+        public static void Main()
+        {
+            edges = new List<Edge>();
+            childNodes = new Dictionary<string, List<string>>();
+            edgesToRemove = new List<Edge>();
+
+            GetInput();
+            edges.Sort();
+            RemoveCyclicEdges();
+            Print();
+        }
+
+        private static void RemoveCyclicEdges()
+        {
+            foreach (Edge edge in edges)
+            {
+                if (!childNodes[edge.Start].Contains(edge.End) || !childNodes[edge.End].Contains(edge.Start))
+                {
+                    continue;
+                }
+
+                childNodes[edge.Start].Remove(edge.End);
+                childNodes[edge.End].Remove(edge.Start);
+
+                visited = new HashSet<string>();
+                isCyclic = false;
+                TraverseGraph(edge.Start, edge.End);
+
+                if (isCyclic)
+                {
+                    edgesToRemove.Add(edge);
+                }
+                else
+                {
+                    childNodes[edge.Start].Add(edge.End);
+                    childNodes[edge.End].Add(edge.Start);
+                }
+            }
+        }
+
+        private static void Print()
+        {
+            Console.WriteLine("Edges to remove: {0}", edgesToRemove.Count);
+            edgesToRemove.ForEach(Console.WriteLine);
+        }
+
+        private static void TraverseGraph(string startNode, string endNode)
+        {
+            if (!visited.Contains(startNode))
+            {
+                if (startNode == endNode)
+                {
+                    isCyclic = true;
+                }
+
+                visited.Add(startNode);
+
+                for (int i = 0; i < childNodes[startNode].Count; i++)
+                {
+                    TraverseGraph(childNodes[startNode][i], endNode);
+                }
+            }
+        }
+
+        private static void GetInput()
+        {
+            string nodeEdges = Console.ReadLine();
+
+            while (nodeEdges.ToLower() != "end")
+            {
+                Regex regex = new Regex(@"(.{1}) -> (.+)");
+                Match match = regex.Match(nodeEdges);
+
+                string nodeStart = match.Groups[1].ToString();
+                string[] nodeEnds = match.Groups[2]
+                    .ToString()
+                    .Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+                childNodes.Add(nodeStart, new List<string>());
+
+                foreach (var nodeEnd in nodeEnds)
+                {
+                    edges.Add(new Edge() { Start = nodeStart, End = nodeEnd });
+                    childNodes[nodeStart].Add(nodeEnd);
+                }
+
+                nodeEdges = Console.ReadLine();
+            }
+        }
+    }
+}
+
+
+------------------------------------------------------------------------
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////-|- Graphs 2-|-/////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////-|- Greedy-|-///////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+========================================================================
+
+========================================================================
+
+
+------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace BestLectures
+{
+    public class Lecture
+    {
+        public string Name { get; set; }
+
+        public int Start { get; set; }
+
+        public int Finish { get; set; }
+    }
+    
+    class BestLectures
+    {
+        static void Main()
+        {
+            var n = int.Parse(Regex.Match(Console.ReadLine(), @".+?(\d+)").Groups[1].Value);
+            var activities = new Lecture[n];
+            for (int i = 0; i < n; i++)
+            {
+                var data = Regex.Match(Console.ReadLine(), @"(\w+).+?(\d+).+?(\d+)").Groups;
+                var activity = new Lecture();
+                activity.Name = data[1].Value;
+                activity.Start = int.Parse(data[2].Value);
+                activity.Finish = int.Parse(data[3].Value);
+                activities[i] = activity;
+            }
+
+            Array.Sort(activities, (a, b) => a.Finish.CompareTo(b.Finish));
+
+            var lastSelectedActivity = activities[0];
+            Print(lastSelectedActivity);
+
+            foreach (var activity in activities)
+            {
+                if (activity.Start >= lastSelectedActivity.Finish)
+                {
+                    Print(activity);
+                    lastSelectedActivity = activity;
+                }
+            }
+        }
+
+        private static void Print(Lecture activity)
+        {
+            Console.WriteLine("{0}-{1} -> {2}", activity.Start, activity.Finish, activity.Name);
+        }
+    }
+}
+
+------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Egyptian_Fractions
+{
+    internal class EgyptianFractions
+    {
+        private static void Main(string[] args)
+        {
+            var input = Console.ReadLine();
+            var fractions = input.Split('/').Select(int.Parse).ToList();
+            var coef = (double)fractions[0] / fractions[1];
+            if (coef > 1d)
+            {
+                Console.WriteLine("Error (fraction is equal to or greater than 1)");
+                return;
+            }
+
+            var devider = 2;
+            var result = new List<string>();
+            while (coef > 0.0000001d)
+            {
+                if (coef - 1d / devider >= 0)
+                {
+                    coef -= 1d / devider;
+                    result.Add(string.Format("1/{0}", devider));
+                }
+
+                devider++;
+            }
+
+            Console.WriteLine("{0} = {1}", input, string.Join(" + ", result));
+        }
+    }
+}
+------------------------------------------------------------------------
+namespace Fractional_Knapsack
+{
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text.RegularExpressions;
+
+    class FractionalKnapsack
+    {
+        static void Main(string[] args)
+        {
+            var capacity = int.Parse(Regex.Match(Console.ReadLine(), @".+:\s(\d+)").Groups[1].Value);
+            var items = int.Parse(Regex.Match(Console.ReadLine(), @".+:\s(\d+)").Groups[1].Value);
+            var pricePerWeight = new Dictionary<double, string>();
+            for (int i = 0; i < items; i++)
+            {
+                var item = Console.ReadLine();
+                var data = Regex.Match(item, @"(\d+).+?(\d+)");
+                var coef = double.Parse(data.Groups[1].Value) / double.Parse(data.Groups[2].Value);
+                pricePerWeight.Add(coef, item);
+            }
+
+            var sortedPricePerWeight = pricePerWeight.OrderByDescending(p => p.Key);
+            var capacityLeft = capacity;
+            var totalPrice = 0d;
+            var usedItems = new List<string>();
+
+            foreach (var pair in sortedPricePerWeight)
+            {
+                var data = Regex.Match(pair.Value, @"(\d+).+?(\d+)");
+                var price = int.Parse(data.Groups[1].Value);
+                var weight = int.Parse(data.Groups[2].Value);
+                if (capacityLeft > weight)
+                {
+                    totalPrice += price;
+                    usedItems.Add("100|" + weight + "|" + price);
+                    capacityLeft -= weight;
+                }
+                else
+                {
+                    var percentageToUse = (double)capacityLeft / weight;
+                    usedItems.Add(string.Format("{0}|", percentageToUse * 100) + weight + "|" + price);
+                    totalPrice += price * percentageToUse;
+                    break;
+                }
+            }
+
+            foreach (var item in usedItems)
+            {
+                var data = item.Split('|');
+                var percentage = double.Parse(data[0]);
+                var weight = double.Parse(data[1]);
+                var price = double.Parse(data[2]);
+                Console.WriteLine("Take {0:F2}% of item with price {1:F2} and weight {2:F2}",
+                    percentage, price, weight);
+            }
+
+            Console.WriteLine("Total price: {0:F2}", totalPrice);
+        }
+    }
+}
+------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
+
+namespace Processor
+{
+    public class ProcessorTask
+    {
+        public int Value { get; set; }
+
+        public int Deadline { get; set; }
+
+        public int Id { get; set; }
+
+        public double ValuePerTurns { get; set; }
+    }
+
+
+    class Processor
+    {
+        static void Main(string[] args)
+        {
+            var n = int.Parse(Regex.Match(Console.ReadLine(), @".+?(\d+)").Groups[1].Value);
+            var tasks = new List<ProcessorTask>(n);
+            var id = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                var data = Regex.Match(Console.ReadLine(), @"(\d+)\s-\s(\d+)").Groups;
+                var processorTask = new ProcessorTask();
+                processorTask.Value = int.Parse(data[1].Value);
+                processorTask.Deadline = int.Parse(data[2].Value);
+                processorTask.ValuePerTurns = (double)processorTask.Value / processorTask.Deadline;
+                processorTask.Id = ++id;
+                tasks.Add(processorTask);
+            }
+
+            var sortedTasks = tasks.OrderByDescending(t => t.ValuePerTurns).ThenBy(t => t.Deadline).ThenByDescending(t => t.Value).ToList();
+
+            var totalValue = 0;
+            var turn = 0;
+            var schedule = new List<int>();
+            while (sortedTasks.Any())
+            {
+                sortedTasks.RemoveAll(t => t.Deadline == turn);
+                if (!sortedTasks.Any())
+                {
+                    break;
+                }
+
+                var task = sortedTasks.First();
+                schedule.Add(task.Id);
+                sortedTasks.Remove(task);
+                totalValue += task.Value;
+                Console.WriteLine(task.Id);
+                foreach (var processorTask in sortedTasks)
+                {
+                    processorTask.ValuePerTurns = (double)processorTask.Value / (processorTask.Deadline - turn);
+                }
+
+                sortedTasks = sortedTasks.OrderByDescending(t => t.ValuePerTurns).ThenBy(t => t.Deadline).ThenByDescending(t => t.Value).ToList();
+
+                turn++;
+            }
+
+            Console.WriteLine("Optimal schedule:  {0}", string.Join(" -> ", schedule));
+            Console.WriteLine("Total value: " + totalValue);
+        }
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////-|- Problem Methodology-|-//////////////////
+////////////////////////////////////////////////////////////////////////
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _01.Shortest_Path_in_Matrix
+{
+    class ShortestPath
+    {
+        static List<int> Dijkstra(int[,] graph, int sourceNode, int destinationNode)
+        {
+            int n = graph.GetLength(0);
+
+            // Initialize the distance[]
+            int[] distance = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                distance[i] = int.MaxValue;
+            }
+            distance[sourceNode] = 0;
+
+            // Dijkstra's algorithm implemented without priority queue
+            var used = new bool[n];
+            int?[] previous = new int?[n];
+            while (true)
+            {
+                // Find the nearest unused node from the source
+                int minDistance = int.MaxValue;
+                int minNode = 0;
+                for (int node = 0; node < n; node++)
+                {
+                    if (!used[node] && distance[node] < minDistance)
+                    {
+                        minDistance = distance[node];
+                        minNode = node;
+                    }
+                }
+                if (minDistance == int.MaxValue)
+                {
+                    // No min distance node found --> algorithm finished
+                    break;
+                }
+
+                used[minNode] = true;
+
+                // Improve the distance[0…n-1] through minNode
+                for (int i = 0; i < n; i++)
+                {
+                    if (graph[minNode, i] > 0)
+                    {
+                        int newDistance = distance[minNode] + graph[minNode, i];
+                        if (newDistance < distance[i])
+                        {
+                            distance[i] = newDistance;
+                            previous[i] = minNode;
+                        }
+                    }
+                }
+            }
+
+            if (distance[destinationNode] == int.MaxValue)
+            {
+                // No path found from sourceNode to destinationNode
+                return null;
+            }
+
+            // Reconstruct the shortest path from sourceNode to destinationNode
+            var path = new List<int>();
+            int? currentNode = destinationNode;
+            while (currentNode != null)
+            {
+                path.Add(currentNode.Value);
+                currentNode = previous[currentNode.Value];
+            }
+            path.Reverse();
+            return path;
+        }
+
+        public static void Main()
+        {
+            var height = int.Parse(Console.ReadLine());
+            var width = int.Parse(Console.ReadLine());
+
+            var matrix = new int[height, width];
+            for (int row = 0; row < height; row++)
+            {
+                var data = Console.ReadLine().Split(' ');
+                for (int col = 0; col < data.Length; col++)
+                {
+                    var node = int.Parse(data[col]);
+                    matrix[row, col] = node;
+                }
+            }
+
+            var size = width * height;
+            var graph = new int[size, size];
+            var number = 0;
+            for (int row = 0; row < height; row++)
+            {
+                for (int col = 0; col < width; col++)
+                {
+                    if (col + 1 < width)
+                    {
+                        var rightValue = matrix[row, col + 1];
+                        var rightNumber = number + 1;
+                        graph[number, rightNumber] = rightValue;
+                    }
+
+                    if (col - 1 >= 0)
+                    {
+                        var leftValue = matrix[row, col - 1];
+                        var leftNumber = number - 1;
+                        graph[number, leftNumber] = leftValue;
+                    }
+
+                    if (row - 1 >= 0)
+                    {
+                        var upValue = matrix[row - 1, col];
+                        var upNumber = number - width;
+                        graph[number, upNumber] = upValue;
+                    }
+
+                    if (row + 1 < height)
+                    {
+                        var downValue = matrix[row + 1, col];
+                        var downNumber = number + width;
+                        graph[number, downNumber] = downValue;
+                    }
+
+                    number++;
+                }
+            }
+
+            //for (int i = 0; i < graph.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < graph.GetLength(1); j++)
+            //    {
+            //        Console.Write(graph[i, j] + " ");
+            //    }
+
+            //    Console.WriteLine();
+            //}
+
+            //// For 4 nodes
+            //// 0 - {1, 2}
+            //// 1 - {0, 3}
+            //// 2 - {0, 4}
+            //// 3 - {1, 2}
+            //// As matrix:
+            //// 2 4
+            //// 9 1 
+            
+            //    var graphTest = new[,]
+            //{
+            //    // 0   1   2   3 
+            //    {  0,  4,  9,  0}, // 0
+            //    {  2,  0,  0,  1}, // 1
+            //    {  2,  0,  0,  1}, // 2
+            //    {  0,  4,  9,  0}, // 3
+            //};
+
+            FindAndPrintShortestPath(graph, matrix, 0, number - 1);
+        }
+
+        static void FindAndPrintShortestPath(int[,] graph, int[,] matrix, int sourceNode, int destinationNode)
+        {
+            var path = Dijkstra(graph, sourceNode, destinationNode);
+            if (path == null)
+            {
+                Console.WriteLine("no path");
+            }
+            else
+            {
+                int pathLength = matrix[0, 0]; // Start point
+                var formattedPath = new StringBuilder();
+                for (int i = 0; i < path.Count - 1; i++)
+                {
+                    pathLength += graph[path[i], path[i + 1]];
+                    var row = path[i] / matrix.GetLength(1);
+                    var col = path[i] % matrix.GetLength(1);
+                    formattedPath.Append(" " + matrix[row, col]);
+                }
+
+                // Last
+                formattedPath.Append(" " + matrix[matrix.GetLength(0) - 1, matrix.GetLength(1) - 1]);
+
+                Console.WriteLine("Length: {0}", pathLength);
+                Console.WriteLine("Path: {0}", formattedPath);
+            }
+        }
+    }
+}
+------------------------------------------------------------------------
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////-|- END-|-//////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+

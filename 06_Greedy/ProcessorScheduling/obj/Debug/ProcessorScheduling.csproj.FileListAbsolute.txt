@@ -1,0 +1,6 @@
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\ProcessorScheduling\bin\Debug\ProcessorScheduling.exe.config
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\ProcessorScheduling\bin\Debug\ProcessorScheduling.exe
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\ProcessorScheduling\bin\Debug\ProcessorScheduling.pdb
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\ProcessorScheduling\obj\Debug\ProcessorScheduling.csprojResolveAssemblyReference.cache
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\ProcessorScheduling\obj\Debug\ProcessorScheduling.exe
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\ProcessorScheduling\obj\Debug\ProcessorScheduling.pdb

@@ -1,0 +1,9 @@
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\04.GenerateSubSetsOfArray\bin\Debug\04.GenerateSubSetsOfArray.exe.config
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\04.GenerateSubSetsOfArray\bin\Debug\04.GenerateSubSetsOfArray.exe
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\04.GenerateSubSetsOfArray\bin\Debug\04.GenerateSubSetsOfArray.pdb
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\04.GenerateSubSetsOfArray\obj\Debug\04.GenerateSubSetsOfArray.csprojResolveAssemblyReference.cache
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\04.GenerateSubSetsOfArray\obj\Debug\04.GenerateSubSetsOfArray.exe
+C:\Users\Георги\Desktop\СофтУни\Open courses\Algotihms\April-2016\02.Combinatorial\02.CombinatorialAlgorithmsHomework\04.GenerateSubSetsOfArray\obj\Debug\04.GenerateSubSetsOfArray.pdb
+C:\Users\Stefan\Desktop\Algorithms\Combinatorial Algorithms\For Evaluation\02.CombinatorialAlgorithmsHomework\04.GenerateSubSetsOfArray\bin\Debug\04.GenerateSubSetsOfArray.exe.config
+C:\Users\Stefan\Desktop\Algorithms\Combinatorial Algorithms\For Evaluation\02.CombinatorialAlgorithmsHomework\04.GenerateSubSetsOfArray\obj\Debug\04.GenerateSubSetsOfArray.exe
+C:\Users\Stefan\Desktop\Algorithms\Combinatorial Algorithms\For Evaluation\02.CombinatorialAlgorithmsHomework\04.GenerateSubSetsOfArray\obj\Debug\04.GenerateSubSetsOfArray.pdb

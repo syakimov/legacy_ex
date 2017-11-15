@@ -1,0 +1,6 @@
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\RecursionHW\bin\Debug\RecursionHW.exe.config
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\RecursionHW\bin\Debug\RecursionHW.exe
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\RecursionHW\bin\Debug\RecursionHW.pdb
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\RecursionHW\obj\Debug\RecursionHW.csprojResolveAssemblyReference.cache
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\RecursionHW\obj\Debug\RecursionHW.exe
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\RecursionHW\obj\Debug\RecursionHW.pdb

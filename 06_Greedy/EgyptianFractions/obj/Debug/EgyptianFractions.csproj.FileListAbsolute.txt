@@ -1,0 +1,6 @@
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\EgyptianFractions\bin\Debug\EgyptianFractions.exe.config
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\EgyptianFractions\bin\Debug\EgyptianFractions.exe
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\EgyptianFractions\bin\Debug\EgyptianFractions.pdb
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\EgyptianFractions\obj\Debug\EgyptianFractions.csprojResolveAssemblyReference.cache
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\EgyptianFractions\obj\Debug\EgyptianFractions.exe
+C:\Users\sidekick\Documents\Algorithms\GreedyAlgorithms\EgyptianFractions\obj\Debug\EgyptianFractions.pdb

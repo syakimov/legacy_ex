@@ -1,0 +1,6 @@
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\ConnectedAreasInMatrix\bin\Debug\ConnectedAreasInMatrix.exe.config
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\ConnectedAreasInMatrix\bin\Debug\ConnectedAreasInMatrix.exe
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\ConnectedAreasInMatrix\bin\Debug\ConnectedAreasInMatrix.pdb
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\ConnectedAreasInMatrix\obj\Debug\ConnectedAreasInMatrix.exe
+c:\users\ivan ivanov\documents\visual studio 2015\Projects\RecursionHW\ConnectedAreasInMatrix\obj\Debug\ConnectedAreasInMatrix.pdb
+C:\Users\Ivan Ivanov\documents\visual studio 2015\Projects\RecursionHW\ConnectedAreasInMatrix\obj\Debug\ConnectedAreasInMatrix.csprojResolveAssemblyReference.cache
